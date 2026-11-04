@@ -1,0 +1,11 @@
+CREATE DATABASE function_db;
+USE function_db;
+DELIMITER //
+CREATE FUNCTION SquareNumber(n INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+ RETURN n * n;
+END //
+DELIMITER ;
+SELECT SquareNumber(5) AS Result;
